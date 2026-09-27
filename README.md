@@ -1,93 +1,137 @@
-# bio_cell_miniproject_html_css
-This is an HTML file that creates a webpage about the human body's organ systems. The webpage has a navigation menu with links to different sections, each covering a specific organ system or topic.
+# 🧬 CellVerse — The Unit of Life
 
-Here's a breakdown of the HTML structure:
+CellVerse is an interactive educational web application created as a
+biology mini-project to explain the structure and functions of cells
+and their major organelles.
 
-1. The header section contains:
-    - A dropdown menu listing group members.
-    - A home button that links to the top of the page.
-    - A title "Human Body" in a large font size.
-    - A navigation menu with links to different sections (Skeletal, Respiratory, Muscular, etc.).
-2. The main content is divided into sections, each with:
-    - A heading (h1) with the topic name.
-    - An image related to the topic.
-    - A horizontal rule (hr) to separate sections.
-3. The sections are:
-    - Home: An introduction to the human body organ systems.
-    - Skeletal: Covers the vertebral column, joints, and bones.
-    - Respiratory: Covers the lungs, nose, trachea, and diaphragm.
-    - Muscular: Covers skeletal, cardiac, and smooth muscles.
-    - Circulatory: Covers the heart, arteries, veins, and blood.
-    - Digestive: Covers the mouth, pharynx, esophagus, stomach, small intestine, large intestine, rectum, and anus.
-    - Nervous: Covers the spinal cord, medulla, pons, cerebellum, midbrain, diencephalon, and cerebral hemispheres.
+The project presents cell biology using a modern responsive frontend
+instead of a traditional static information page.
 
-This is a CSS stylesheet that defines the visual styling and layout for the HTML file you provided earlier. Here's a breakdown of the styles:
+---
 
-Global Styles
+## 🌐 Live Website
 
-- *: Sets default styles for all elements, including:
-    - margin and padding to 0
-    - box-sizing to border-box
-    - scroll-margin to 100px
-    - scroll-behavior to smooth
-    - font-family to 'Popins', sans-serif
+The project can be deployed using GitHub Pages.
 
-Navigation Menu Styles
+After enabling GitHub Pages, the website will be available at:
 
-- ul: Styles for unordered lists (navigation menus)
-    - list-style to none
-    - background to #11141a (dark gray)
-- ul li: Styles for list items (menu items)
-    - display to inline-block
-    - position to relative
-- ul li a: Styles for links within menu items
-    - opacity to 0.9
-    - display to block
-    - padding to 15px 25px
-    - color to #fff (white)
-    - text-decoration to none
-    - text-align to center
-    - font-size to 18px
-- ul li ul.dropdown and ul li ul.dropdown2: Styles for dropdown menus
-    - width to 100% or 150% (depending on the dropdown)
-    - opacity to 0.9
-    - background to #11141a (dark gray)
-    - position to absolute
-    - z-index to 999
-    - display to none (hidden by default)
-- ul li:hover ul.dropdown and ul li:hover ul.dropdown2: Styles for displaying dropdown menus on hover
-    - display to block
+`https://aryan-gupta-9044.github.io/bio_cell_miniproject_html_css/`
 
-Header Styles
+---
 
-- header: Styles for the header section
-    - position to fixed
-    - top to 0
-    - left to 0
-    - width to 100%
-    - padding to 20px 70px
-    - background to #11141a (dark gray)
-    - display to flex
-    - justify-content to space-between
-    - align-items to center
-    - z-index to 100
+## 📚 About the Project
 
-Logo and Home Link Styles
+A cell is the fundamental structural and functional unit of life.
 
-- .logo and .home: Styles for the logo and home link
-    - font-size to 18px
-    - color to #FF8F01 (orange) or #fff (white)
-    - text-decoration to none
-    - font-weight to 600
-    - transition to .3s
+CellVerse provides an interactive introduction to:
 
-Navigation Link Styles
+- Animal cells
+- Plant cells
+- Cell membrane
+- Cytoplasm
+- Nucleus
+- Cytoskeleton
+- Centriole
+- Mitochondrion
+- Endoplasmic reticulum
+- Ribosome
+- Golgi apparatus
+- Lysosome
+- Vacuole
+- Chloroplast
 
-- nav a: Styles for navigation links
-    - font-size to 18px
-    - color to #fff (white)
-    - text-decoration to none
-    - font-weight to 500
-    - margin-left to 1px
+The website also provides a comparison between animal and plant cells
+and explains how different organelles work together.
 
-These styles create a dark gray navigation menu with orange and white accents, and a fixed header with a logo and home link. The dropdown menus are hidden by default and display on hover.
+---
+
+## ✨ Features
+
+### 🏠 Interactive Landing Page
+
+The homepage introduces the concept of cells and provides quick
+navigation to different parts of the website.
+
+### 🔬 Cell Types
+
+The website explains:
+
+- Animal cells
+- Plant cells
+
+Each cell type includes its major characteristics and specialized
+structures.
+
+### ⚙️ Organelle Explorer
+
+Users can explore individual organelles through interactive cards.
+
+Each organelle includes:
+
+- Name
+- Description
+- Structure
+- Location
+- Function
+
+### 🔎 Search
+
+The organelle explorer includes a live search feature that allows
+users to quickly find specific organelles.
+
+### 🌓 Dark / Light Mode
+
+The website supports both dark and light themes.
+
+### 📊 Cell Comparison
+
+A comparison table explains the major differences between animal and
+plant cells.
+
+### 🔄 Cellular Process
+
+A visual section explains how major organelles work together:
+
+DNA → Ribosomes → Endoplasmic Reticulum → Golgi Apparatus → Cellular Activity
+
+### 📱 Responsive Design
+
+The website is designed to work on:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+### 📈 Reading Progress
+
+A progress indicator at the top of the page shows how much of the
+website has been viewed.
+
+### ⬆️ Back to Top
+
+A floating button allows users to quickly return to the top of
+the page.
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
+- GitHub Pages
+
+No frontend framework is required.
+
+---
+
+## 📁 Project Structure
+
+```text
+bio_cell_miniproject_html_css/
+│
+├── index.html
+├── style.css
+└── README.md
