@@ -4,141 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Interactive educational website explaining animal cells, plant cells, and major cell organelles."
-    >
-
-    <meta name="theme-color" content="#0b1220">
-
-    <title>CellVerse | The Unit of Life</title>
+    <title>Cell: The Unit of Life</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
 </head>
 
 <body>
 
-<!-- =========================
-     SCROLL PROGRESS
-========================= -->
-
-<div class="scroll-progress" id="scrollProgress"></div>
-
-
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
 
-    <div class="nav-container">
+    <div class="logo">
+        <span class="logo-icon">🧬</span>
+        <span>Cell Explorer</span>
+    </div>
 
-        <a href="#home" class="brand">
-            <span class="brand-icon">🧬</span>
-            <span>Cell<span>Verse</span></span>
-        </a>
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
+    <nav id="mainNav">
 
-        <nav class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#cells">Cells</a>
 
-            <a href="#home">Home</a>
-            <a href="#cells">Cells</a>
-            <a href="#organelles">Organelles</a>
-            <a href="#comparison">Compare</a>
-            <a href="#about">About</a>
-
-            <button
-                class="theme-toggle"
-                id="themeToggle"
-                aria-label="Toggle theme"
-            >
-                🌙
+        <div class="nav-dropdown">
+            <button class="nav-drop-btn">
+                Organelles ▾
             </button>
 
-        </nav>
+            <div class="dropdown-menu">
+
+                <a href="#cellmembrane">Cell Membrane</a>
+                <a href="#cytoplasm">Cytoplasm</a>
+                <a href="#nucleus">Nucleus</a>
+                <a href="#cytoskeleton">Cytoskeleton</a>
+                <a href="#centriole">Centriole</a>
+                <a href="#mitochondrion">Mitochondrion</a>
+                <a href="#endoplasmicreticulum">Endoplasmic Reticulum</a>
+                <a href="#ribosome">Ribosome</a>
+                <a href="#golgibodies">Golgi Bodies</a>
+                <a href="#lysosomes">Lysosomes</a>
+                <a href="#vacuole">Vacuole</a>
+                <a href="#chloroplast">Chloroplast</a>
+
+            </div>
+        </div>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="themeToggle" class="icon-btn">
+            🌙
+        </button>
+
+        <button id="membersBtn" class="members-btn">
+            👥 Members
+        </button>
 
     </div>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
-<main>
-
-<section class="hero" id="home">
-
-    <div class="hero-background"></div>
+<section id="home" class="hero">
 
     <div class="hero-content">
 
         <div class="hero-badge">
-            🔬 Biology Interactive Learning
+            🧫 BIOLOGY MINI PROJECT
         </div>
 
         <h1>
-            The Cell:
-            <span>Unit of Life</span>
+            Cell:
+            <span>The Unit of Life</span>
         </h1>
 
         <p>
-            Explore the microscopic world of cells and discover how
-            specialized organelles work together to keep living organisms
-            alive, growing and functioning.
+            Explore the fascinating world of cells, their structures,
+            organelles and the essential functions that keep living
+            organisms alive.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#cells" class="btn btn-primary">
+            <a href="#cells" class="primary-btn">
                 Explore Cells →
             </a>
 
-            <a href="#organelles" class="btn btn-secondary">
+            <a href="#organelles" class="secondary-btn">
                 Explore Organelles
             </a>
 
         </div>
 
-        <div class="hero-stats">
+    </div>
 
-            <div>
-                <strong>2</strong>
-                <span>Cell Types</span>
-            </div>
 
-            <div>
-                <strong>12+</strong>
-                <span>Organelles</span>
-            </div>
+    <div class="hero-cell">
 
-            <div>
-                <strong>100%</strong>
-                <span>Interactive</span>
-            </div>
+        <div class="cell-orbit orbit-one"></div>
+        <div class="cell-orbit orbit-two"></div>
 
+        <div class="cell-core">
+            🧬
         </div>
 
     </div>
@@ -146,166 +121,96 @@
 </section>
 
 
-<!-- =========================
-     INTRODUCTION
-========================= -->
+<!-- ================= QUICK STATS ================= -->
 
-<section class="section introduction" id="cells">
+<section class="stats">
 
-    <div class="section-heading">
-
-        <span class="section-label">
-            INTRODUCTION
-        </span>
-
-        <h2>
-            What is a Cell?
-        </h2>
-
-        <p>
-            A cell is the basic structural and functional unit of life.
-            Every living organism is made up of one or more cells.
-            Cells contain specialized structures called organelles that
-            perform different functions necessary for survival.
-        </p>
-
+    <div class="stat-card">
+        <strong>2</strong>
+        <span>Major Cell Types</span>
     </div>
 
+    <div class="stat-card">
+        <strong>12+</strong>
+        <span>Organelles</span>
+    </div>
 
-    <div class="feature-grid">
+    <div class="stat-card">
+        <strong>1</strong>
+        <span>Fundamental Unit</span>
+    </div>
 
-        <article class="feature-card">
-
-            <div class="feature-icon">🧱</div>
-
-            <h3>Basic Unit of Life</h3>
-
-            <p>
-                Cells form the fundamental building blocks of all living
-                organisms.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <div class="feature-icon">⚙️</div>
-
-            <h3>Specialized Functions</h3>
-
-            <p>
-                Different organelles perform specialized tasks such as
-                energy production, protein synthesis and waste removal.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <div class="feature-icon">🧬</div>
-
-            <h3>Genetic Information</h3>
-
-            <p>
-                DNA stores genetic instructions that control cellular
-                activities and inheritance.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <div class="feature-icon">🔄</div>
-
-            <h3>Continuous Activity</h3>
-
-            <p>
-                Cells constantly perform chemical reactions required for
-                growth, repair and maintaining life.
-            </p>
-
-        </article>
-
+    <div class="stat-card">
+        <strong>∞</strong>
+        <span>Biological Functions</span>
     </div>
 
 </section>
 
 
-<!-- =========================
-     CELL TYPES
-========================= -->
+<!-- ================= CELLS ================= -->
 
-<section class="section cell-types">
+<section id="cells" class="section">
 
     <div class="section-heading">
 
-        <span class="section-label">
-            CELL TYPES
-        </span>
+        <span class="section-tag">CELL TYPES</span>
 
         <h2>
-            Animal Cell vs Plant Cell
+            Understanding Different Cells
         </h2>
 
         <p>
-            Animal and plant cells are both eukaryotic cells, but they have
-            several structural differences that help them perform their
-            specific biological functions.
+            Cells are the basic structural and functional units of life.
+            Although all cells share some common characteristics,
+            plant and animal cells have important structural differences.
         </p>
 
     </div>
 
 
-    <div class="cell-grid">
+    <div class="cell-cards">
+
 
         <!-- ANIMAL CELL -->
 
-        <article class="cell-card animal-card">
+        <article class="cell-card">
 
-            <div class="cell-visual animal-visual">
+            <div class="card-image">
 
-                <div class="cell-nucleus">
-                    N
-                </div>
-
-                <div class="cell-organelle organelle-1"></div>
-                <div class="cell-organelle organelle-2"></div>
-                <div class="cell-organelle organelle-3"></div>
+                <img
+                    src="https://sciencenotes.org/wp-content/uploads/2023/05/Labeled-Animal-Cell-Diagram.png"
+                    alt="Labeled Animal Cell Diagram"
+                >
 
             </div>
 
-            <div class="cell-card-content">
+            <div class="card-content">
 
-                <span class="card-tag">
-                    EUKARYOTIC
+                <span class="card-label animal-label">
+                    ANIMAL CELL
                 </span>
 
                 <h3>Animal Cell</h3>
 
                 <p>
-                    Animal cells are surrounded by a cell membrane and
-                    contain a nucleus and membrane-bound organelles.
+                    Animal cells are eukaryotic cells containing a
+                    membrane-bound nucleus and specialized organelles.
                     They do not have a cell wall or chloroplasts.
                 </p>
 
-                <div class="cell-points">
+                <ul>
+                    <li>✓ Has a cell membrane</li>
+                    <li>✓ Contains nucleus</li>
+                    <li>✓ Contains mitochondria</li>
+                    <li>✓ Has centrioles</li>
+                </ul>
 
-                    <span>✓ Cell membrane</span>
-                    <span>✓ Nucleus</span>
-                    <span>✓ Mitochondria</span>
-                    <span>✓ Lysosomes</span>
-
-                </div>
-
-                <a
-                    href="#comparison"
-                    class="text-link"
-                >
-                    View characteristics →
-                </a>
+                <button
+                    class="learn-btn"
+                    data-info="animal">
+                    Learn More →
+                </button>
 
             </div>
 
@@ -314,53 +219,43 @@
 
         <!-- PLANT CELL -->
 
-        <article class="cell-card plant-card">
+        <article class="cell-card">
 
-            <div class="cell-visual plant-visual">
+            <div class="card-image">
 
-                <div class="cell-nucleus">
-                    N
-                </div>
-
-                <div class="plant-vacuole">
-                    V
-                </div>
-
-                <div class="cell-organelle plant-organelle-1"></div>
-                <div class="cell-organelle plant-organelle-2"></div>
+                <img
+                    src="https://sciencenotes.org/wp-content/uploads/2023/05/Labeled-Plant-Cell-Diagram.png"
+                    alt="Labeled Plant Cell Diagram"
+                >
 
             </div>
 
-            <div class="cell-card-content">
+            <div class="card-content">
 
-                <span class="card-tag green">
-                    EUKARYOTIC
+                <span class="card-label plant-label">
+                    PLANT CELL
                 </span>
 
                 <h3>Plant Cell</h3>
 
                 <p>
-                    Plant cells contain structures such as a cell wall,
-                    chloroplasts and a large central vacuole that help
-                    plants maintain their structure and perform
-                    photosynthesis.
+                    Plant cells are eukaryotic cells surrounded by a
+                    rigid cell wall. They contain chloroplasts that
+                    allow plants to perform photosynthesis.
                 </p>
 
-                <div class="cell-points">
+                <ul>
+                    <li>✓ Cell wall</li>
+                    <li>✓ Chloroplasts</li>
+                    <li>✓ Large central vacuole</li>
+                    <li>✓ Nucleus and mitochondria</li>
+                </ul>
 
-                    <span>✓ Cell wall</span>
-                    <span>✓ Chloroplasts</span>
-                    <span>✓ Large vacuole</span>
-                    <span>✓ Nucleus</span>
-
-                </div>
-
-                <a
-                    href="#comparison"
-                    class="text-link"
-                >
-                    View characteristics →
-                </a>
+                <button
+                    class="learn-btn"
+                    data-info="plant">
+                    Learn More →
+                </button>
 
             </div>
 
@@ -371,25 +266,23 @@
 </section>
 
 
-<!-- =========================
-     ORGANELLES
-========================= -->
+<!-- ================= ORGANELLES ================= -->
 
-<section class="section organelles-section" id="organelles">
+<section id="organelles" class="section organelle-section">
 
     <div class="section-heading">
 
-        <span class="section-label">
+        <span class="section-tag">
             CELL ORGANELLES
         </span>
 
         <h2>
-            Explore the Cell's Machinery
+            Explore the Organelles
         </h2>
 
         <p>
-            Every organelle has a specific role. Select an organelle to
-            learn about its structure, location and primary function.
+            Click on any organelle to learn about its structure,
+            function and biological importance.
         </p>
 
     </div>
@@ -397,27 +290,43 @@
 
     <!-- SEARCH -->
 
-    <div class="search-container">
+    <div class="search-box">
 
-        <span class="search-icon">🔍</span>
+        <span>🔍</span>
 
         <input
-            type="search"
+            type="text"
             id="organelleSearch"
             placeholder="Search organelles..."
-            aria-label="Search organelles"
         >
-
-        <span id="searchCount">
-            12 organelles
-        </span>
 
     </div>
 
 
-    <!-- ORGANELLE GRID -->
+    <!-- FILTERS -->
 
-    <div class="organelle-grid" id="organelleGrid">
+    <div class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="both">
+            Plant + Animal
+        </button>
+
+        <button class="filter-btn" data-filter="plant">
+            Plant
+        </button>
+
+        <button class="filter-btn" data-filter="animal">
+            Animal
+        </button>
+
+    </div>
+
+
+    <div class="organelle-grid">
 
 
         <!-- CELL MEMBRANE -->
@@ -425,31 +334,33 @@
         <article
             class="organelle-card"
             data-name="cell membrane"
-            data-title="Cell Membrane"
-            data-icon="🫧"
-            data-function="Controls what enters and leaves the cell. It helps maintain the cell's internal environment."
-            data-structure="A thin, flexible phospholipid bilayer containing proteins."
-            data-location="Outer boundary of animal cells and inner boundary of plant cells."
-        >
+            data-type="both"
+            id="cellmembrane"
+            data-organelle="cellmembrane">
 
-            <div class="organelle-icon blue">
-                🫧
+            <div class="organelle-number">01</div>
+
+            <img
+                src="https://i.pinimg.com/originals/ab/55/dd/ab55ddf63b29e685623e5097c119ee79.jpg"
+                alt="Cell Membrane"
+            >
+
+            <div class="organelle-info">
+
+                <span>STRUCTURE</span>
+
+                <h3>Cell Membrane</h3>
+
+                <p>
+                    A selectively permeable boundary surrounding
+                    the cell.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                01
-            </span>
-
-            <h3>Cell Membrane</h3>
-
-            <p>
-                Selectively controls movement of substances into and out
-                of the cell.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -459,31 +370,33 @@
         <article
             class="organelle-card"
             data-name="cytoplasm"
-            data-title="Cytoplasm"
-            data-icon="💧"
-            data-function="Provides a medium for cellular reactions and suspends the organelles inside the cell."
-            data-structure="A jelly-like material consisting of cytosol and suspended cellular structures."
-            data-location="Located between the cell membrane and nucleus."
-        >
+            data-type="both"
+            id="cytoplasm"
+            data-organelle="cytoplasm">
 
-            <div class="organelle-icon purple">
-                💧
+            <div class="organelle-number">02</div>
+
+            <img
+                src="https://diak46rl5chc7.cloudfront.net/orgs/84716/post_details/kts21p5gpvgtr2hh/x1500_kts21p5gpvgtr2hh.jpg"
+                alt="Cytoplasm"
+            >
+
+            <div class="organelle-info">
+
+                <span>INTERNAL MATRIX</span>
+
+                <h3>Cytoplasm</h3>
+
+                <p>
+                    Jelly-like material where many cellular
+                    reactions occur.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                02
-            </span>
-
-            <h3>Cytoplasm</h3>
-
-            <p>
-                Jelly-like material where many important cellular reactions
-                take place.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -493,31 +406,33 @@
         <article
             class="organelle-card"
             data-name="nucleus"
-            data-title="Nucleus"
-            data-icon="🧬"
-            data-function="Stores DNA and regulates gene expression and many activities of the cell."
-            data-structure="A membrane-bound organelle containing chromatin and the nucleolus."
-            data-location="Usually located near the center of eukaryotic cells."
-        >
+            data-type="both"
+            id="nucleus"
+            data-organelle="nucleus">
 
-            <div class="organelle-icon pink">
-                🧬
+            <div class="organelle-number">03</div>
+
+            <img
+                src="https://cdn.britannica.com/53/116253-050-AC41C0FE/eukaryote-cells-nucleus-nucleoplasm-chromatin-membrane-envelope.jpg"
+                alt="Nucleus"
+            >
+
+            <div class="organelle-info">
+
+                <span>CONTROL CENTER</span>
+
+                <h3>Nucleus</h3>
+
+                <p>
+                    Contains genetic material and controls many
+                    cellular activities.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                03
-            </span>
-
-            <h3>Nucleus</h3>
-
-            <p>
-                Contains genetic material and controls many activities
-                of the cell.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -527,31 +442,33 @@
         <article
             class="organelle-card"
             data-name="cytoskeleton"
-            data-title="Cytoskeleton"
-            data-icon="🕸️"
-            data-function="Maintains cell shape, supports organelles and helps with movement and intracellular transport."
-            data-structure="A network of protein filaments including microtubules, microfilaments and intermediate filaments."
-            data-location="Extends throughout the cytoplasm."
-        >
+            data-type="both"
+            id="cytoskeleton"
+            data-organelle="cytoskeleton">
 
-            <div class="organelle-icon orange">
-                🕸️
+            <div class="organelle-number">04</div>
+
+            <img
+                src="https://thumbs.dreamstime.com/z/cytoskeleton-structure-as-complex-dynamic-network-interlinking-protein-filaments-outline-diagram-labeled-educational-cell-233639056.jpg"
+                alt="Cytoskeleton"
+            >
+
+            <div class="organelle-info">
+
+                <span>STRUCTURAL SUPPORT</span>
+
+                <h3>Cytoskeleton</h3>
+
+                <p>
+                    Network of protein filaments maintaining
+                    cell shape and organization.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                04
-            </span>
-
-            <h3>Cytoskeleton</h3>
-
-            <p>
-                Provides structural support and helps the cell maintain
-                its shape.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -561,31 +478,32 @@
         <article
             class="organelle-card"
             data-name="centriole"
-            data-title="Centriole"
-            data-icon="🎯"
-            data-function="Helps organize microtubules and plays an important role during animal cell division."
-            data-structure="A cylindrical structure made primarily of microtubules."
-            data-location="Usually found near the nucleus in animal cells."
-        >
+            data-type="animal"
+            id="centriole"
+            data-organelle="centriole">
 
-            <div class="organelle-icon yellow">
-                🎯
+            <div class="organelle-number">05</div>
+
+            <img
+                src="https://4.bp.blogspot.com/-5nV4s0i6Few/U75JhjjF67I/AAAAAAAAAHU/Tl9PoYovvnE/s1600/centriole.jpg"
+                alt="Centriole"
+            >
+
+            <div class="organelle-info">
+
+                <span>CELL DIVISION</span>
+
+                <h3>Centriole</h3>
+
+                <p>
+                    Helps organize microtubules during cell division.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                05
-            </span>
-
-            <h3>Centriole</h3>
-
-            <p>
-                Helps organize microtubules and participates in cell
-                division.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -595,65 +513,68 @@
         <article
             class="organelle-card"
             data-name="mitochondrion mitochondria"
-            data-title="Mitochondrion"
-            data-icon="⚡"
-            data-function="Produces ATP through cellular respiration and supplies usable energy for cellular activities."
-            data-structure="Double-membrane organelle with an inner membrane folded into cristae."
-            data-location="Found throughout the cytoplasm of eukaryotic cells."
-        >
+            data-type="both"
+            id="mitochondrion"
+            data-organelle="mitochondrion">
 
-            <div class="organelle-icon red">
-                ⚡
+            <div class="organelle-number">06</div>
+
+            <img
+                src="https://i.pinimg.com/originals/85/b5/71/85b5717994fcfa6f39082323a22870e2.jpg"
+                alt="Mitochondrion"
+            >
+
+            <div class="organelle-info">
+
+                <span>ENERGY PRODUCTION</span>
+
+                <h3>Mitochondrion</h3>
+
+                <p>
+                    Produces ATP through cellular respiration.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                06
-            </span>
-
-            <h3>Mitochondrion</h3>
-
-            <p>
-                Produces ATP and is often described as the powerhouse
-                of the cell.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
 
-        <!-- ER -->
+        <!-- ENDOPLASMIC RETICULUM -->
 
         <article
             class="organelle-card"
             data-name="endoplasmic reticulum er"
-            data-title="Endoplasmic Reticulum"
-            data-icon="〰️"
-            data-function="Rough ER helps synthesize and process proteins, while smooth ER is involved in lipid synthesis and detoxification."
-            data-structure="A network of interconnected membrane-bound tubules and sacs."
-            data-location="Extends through the cytoplasm and is continuous with the nuclear envelope."
-        >
+            data-type="both"
+            id="endoplasmicreticulum"
+            data-organelle="endoplasmicreticulum">
 
-            <div class="organelle-icon cyan">
-                〰️
+            <div class="organelle-number">07</div>
+
+            <img
+                src="https://www.vedantu.com/question-sets/5fb011dd-a715-4612-92af-26acf62a0ab56751384921375060542.png"
+                alt="Endoplasmic Reticulum"
+            >
+
+            <div class="organelle-info">
+
+                <span>TRANSPORT NETWORK</span>
+
+                <h3>Endoplasmic Reticulum</h3>
+
+                <p>
+                    Membrane network involved in protein and lipid
+                    synthesis.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                07
-            </span>
-
-            <h3>Endoplasmic Reticulum</h3>
-
-            <p>
-                Helps manufacture proteins and lipids and transports
-                materials inside the cell.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -663,31 +584,33 @@
         <article
             class="organelle-card"
             data-name="ribosome"
-            data-title="Ribosome"
-            data-icon="🔵"
-            data-function="Ribosomes translate messenger RNA and assemble amino acids into proteins."
-            data-structure="Complexes made of ribosomal RNA and proteins."
-            data-location="Found free in the cytoplasm or attached to rough ER."
-        >
+            data-type="both"
+            id="ribosome"
+            data-organelle="ribosome">
 
-            <div class="organelle-icon blue">
-                🔵
+            <div class="organelle-number">08</div>
+
+            <img
+                src="https://thumbs.dreamstime.com/z/ribosome-diagram-251989207.jpg"
+                alt="Ribosome"
+            >
+
+            <div class="organelle-info">
+
+                <span>PROTEIN SYNTHESIS</span>
+
+                <h3>Ribosome</h3>
+
+                <p>
+                    Molecular machinery responsible for protein
+                    synthesis.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                08
-            </span>
-
-            <h3>Ribosome</h3>
-
-            <p>
-                Builds proteins by translating genetic instructions
-                carried by mRNA.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -696,32 +619,33 @@
 
         <article
             class="organelle-card"
-            data-name="golgi bodies golgi apparatus"
-            data-title="Golgi Apparatus"
-            data-icon="📦"
-            data-function="Modifies, sorts and packages proteins and lipids for transport to their destinations."
-            data-structure="A stack of flattened membrane-bound sacs called cisternae."
-            data-location="Located in the cytoplasm, usually near the endoplasmic reticulum."
-        >
+            data-name="golgi golgi bodies"
+            data-type="both"
+            id="golgibodies"
+            data-organelle="golgibodies">
 
-            <div class="organelle-icon purple">
-                📦
+            <div class="organelle-number">09</div>
+
+            <img
+                src="https://i.pinimg.com/originals/6f/35/6b/6f356b97b7b2ab977a89227caf708a79.jpg"
+                alt="Golgi Bodies"
+            >
+
+            <div class="organelle-info">
+
+                <span>PROCESSING</span>
+
+                <h3>Golgi Bodies</h3>
+
+                <p>
+                    Modifies, sorts and packages proteins and lipids.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                09
-            </span>
-
-            <h3>Golgi Apparatus</h3>
-
-            <p>
-                Modifies, sorts and packages proteins and other molecules
-                for transport.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -731,31 +655,32 @@
         <article
             class="organelle-card"
             data-name="lysosome lysosomes"
-            data-title="Lysosome"
-            data-icon="♻️"
-            data-function="Breaks down waste materials, damaged organelles and macromolecules using digestive enzymes."
-            data-structure="Small membrane-bound vesicles containing hydrolytic enzymes."
-            data-location="Found mainly in the cytoplasm of animal cells."
-        >
+            data-type="animal"
+            id="lysosomes"
+            data-organelle="lysosomes">
 
-            <div class="organelle-icon green">
-                ♻️
+            <div class="organelle-number">10</div>
+
+            <img
+                src="https://cdn4.vectorstock.com/i/1000x1000/33/63/structure-of-lysosomes-infographics-vector-11593363.jpg"
+                alt="Lysosomes"
+            >
+
+            <div class="organelle-info">
+
+                <span>WASTE MANAGEMENT</span>
+
+                <h3>Lysosomes</h3>
+
+                <p>
+                    Digest cellular waste and damaged components.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                10
-            </span>
-
-            <h3>Lysosome</h3>
-
-            <p>
-                Contains digestive enzymes that break down waste and
-                damaged cellular components.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -765,31 +690,32 @@
         <article
             class="organelle-card"
             data-name="vacuole"
-            data-title="Vacuole"
-            data-icon="💧"
-            data-function="Stores water, nutrients, ions and waste materials. In plant cells it also helps maintain turgor pressure."
-            data-structure="A membrane-bound compartment surrounded by the tonoplast."
-            data-location="Large central vacuole in mature plant cells; smaller vacuoles may occur in animal cells."
-        >
+            data-type="both"
+            id="vacuole"
+            data-organelle="vacuole">
 
-            <div class="organelle-icon teal">
-                💧
+            <div class="organelle-number">11</div>
+
+            <img
+                src="https://i.pinimg.com/originals/72/90/ef/7290efd7fdb25451b2192d3d420d83b0.jpg"
+                alt="Vacuole"
+            >
+
+            <div class="organelle-info">
+
+                <span>STORAGE</span>
+
+                <h3>Vacuole</h3>
+
+                <p>
+                    Stores water, nutrients, pigments and waste.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                11
-            </span>
-
-            <h3>Vacuole</h3>
-
-            <p>
-                Stores water, nutrients and waste materials and helps
-                maintain plant cell pressure.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
@@ -799,327 +725,86 @@
         <article
             class="organelle-card"
             data-name="chloroplast"
-            data-title="Chloroplast"
-            data-icon="🌿"
-            data-function="Performs photosynthesis by converting light energy into chemical energy stored in organic molecules."
-            data-structure="Double-membrane organelle containing chlorophyll, thylakoids and stroma."
-            data-location="Found mainly in plant cells and many algae."
-        >
+            data-type="plant"
+            id="chloroplast"
+            data-organelle="chloroplast">
 
-            <div class="organelle-icon green">
-                🌿
+            <div class="organelle-number">12</div>
+
+            <img
+                src="https://search-static.byjusweb.com/question-images/toppr_ext/questions/799799_827172_ans_de96573a16244f72ac78c1da73938873.png"
+                alt="Chloroplast"
+            >
+
+            <div class="organelle-info">
+
+                <span>PHOTOSYNTHESIS</span>
+
+                <h3>Chloroplast</h3>
+
+                <p>
+                    Converts light energy into chemical energy
+                    through photosynthesis.
+                </p>
+
+                <button class="details-btn">
+                    View Details →
+                </button>
+
             </div>
-
-            <span class="organelle-number">
-                12
-            </span>
-
-            <h3>Chloroplast</h3>
-
-            <p>
-                Captures light energy and performs photosynthesis in
-                plant cells and algae.
-            </p>
-
-            <button class="learn-btn">
-                Learn more →
-            </button>
 
         </article>
 
     </div>
 
-
-    <div
-        class="no-results"
-        id="noResults"
-    >
-        <span>🔎</span>
-
-        <h3>No organelle found</h3>
-
-        <p>
-            Try searching for another organelle.
-        </p>
-
-    </div>
-
 </section>
 
 
-<!-- =========================
-     COMPARISON
-========================= -->
+<!-- ================= ABOUT ================= -->
 
-<section
-    class="section comparison-section"
-    id="comparison"
->
+<section id="about" class="about-section">
 
-    <div class="section-heading">
+    <div class="about-content">
 
-        <span class="section-label">
-            QUICK COMPARISON
+        <span class="section-tag">
+            ABOUT THE PROJECT
         </span>
 
         <h2>
-            Animal Cell vs Plant Cell
+            Why Study Cells?
         </h2>
 
         <p>
-            Both cells share many common structures, but plants have
-            specialized structures that support photosynthesis and
-            structural rigidity.
+            Every living organism is made up of cells. Understanding
+            the structure and function of cells helps us understand
+            how organisms grow, obtain energy, reproduce and maintain
+            life.
         </p>
 
-    </div>
-
-
-    <div class="comparison-table-wrapper">
-
-        <table>
-
-            <thead>
-
-                <tr>
-                    <th>Feature</th>
-                    <th>Animal Cell</th>
-                    <th>Plant Cell</th>
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>Cell Membrane</td>
-                    <td>✓ Present</td>
-                    <td>✓ Present</td>
-                </tr>
-
-                <tr>
-                    <td>Cell Wall</td>
-                    <td>✗ Absent</td>
-                    <td>✓ Present</td>
-                </tr>
-
-                <tr>
-                    <td>Nucleus</td>
-                    <td>✓ Present</td>
-                    <td>✓ Present</td>
-                </tr>
-
-                <tr>
-                    <td>Chloroplast</td>
-                    <td>✗ Absent</td>
-                    <td>✓ Present</td>
-                </tr>
-
-                <tr>
-                    <td>Large Central Vacuole</td>
-                    <td>✗ Usually absent</td>
-                    <td>✓ Present</td>
-                </tr>
-
-                <tr>
-                    <td>Centrioles</td>
-                    <td>✓ Commonly present</td>
-                    <td>Usually absent in higher plants</td>
-                </tr>
-
-                <tr>
-                    <td>Photosynthesis</td>
-                    <td>✗ No</td>
-                    <td>✓ Yes</td>
-                </tr>
-
-                <tr>
-                    <td>Typical Shape</td>
-                    <td>Flexible / variable</td>
-                    <td>More rigid / defined</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HOW CELLS WORK
-========================= -->
-
-<section class="section process-section">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            CELLULAR SYSTEM
-        </span>
-
-        <h2>
-            How Organelles Work Together
-        </h2>
-
-        <p>
-            Organelles do not work independently. They form an organized
-            system where materials and information move between different
-            parts of the cell.
-        </p>
-
-    </div>
-
-
-    <div class="process-grid">
-
-        <div class="process-card">
-
-            <span>01</span>
-
-            <h3>DNA Instructions</h3>
-
-            <p>
-                The nucleus stores DNA that contains instructions used
-                by the cell.
-            </p>
-
-        </div>
-
-
-        <div class="process-line">→</div>
-
-
-        <div class="process-card">
-
-            <span>02</span>
-
-            <h3>Protein Production</h3>
-
-            <p>
-                Ribosomes use genetic instructions to assemble proteins.
-            </p>
-
-        </div>
-
-
-        <div class="process-line">→</div>
-
-
-        <div class="process-card">
-
-            <span>03</span>
-
-            <h3>Processing</h3>
-
-            <p>
-                The ER and Golgi apparatus modify and transport
-                cellular products.
-            </p>
-
-        </div>
-
-
-        <div class="process-line">→</div>
-
-
-        <div class="process-card">
-
-            <span>04</span>
-
-            <h3>Energy & Activity</h3>
-
-            <p>
-                Mitochondria provide ATP needed for cellular activities.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT PROJECT
-========================= -->
-
-<section
-    class="section about-section"
-    id="about"
->
-
-    <div class="about-grid">
-
-        <div class="about-content">
-
-            <span class="section-label">
-                ABOUT THE PROJECT
-            </span>
-
-            <h2>
-                Learn Biology Through Interaction
-            </h2>
-
-            <p>
-                CellVerse is an educational mini-project designed to
-                present important concepts related to cell biology in
-                a simple and interactive way.
-            </p>
-
-            <p>
-                Instead of reading information from a static page,
-                users can search organelles, compare cell types and
-                explore individual cellular structures.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Responsive UI</span>
-                <span>GitHub Pages</span>
-
+        <div class="about-points">
+
+            <div>
+                <strong>01</strong>
+                <span>Structure</span>
+                <p>
+                    Learn how different cellular structures are organized.
+                </p>
             </div>
 
-        </div>
-
-
-        <div class="project-card">
-
-            <div class="project-icon">
-                🔬
+            <div>
+                <strong>02</strong>
+                <span>Function</span>
+                <p>
+                    Understand the role played by each organelle.
+                </p>
             </div>
 
-            <h3>
-                Biology Cell Mini Project
-            </h3>
-
-            <p>
-                An interactive frontend project focused on understanding
-                the structure and functions of cells.
-            </p>
-
-            <div class="project-info">
-
-                <div>
-                    <span>Technology</span>
-                    <strong>HTML + CSS + JS</strong>
-                </div>
-
-                <div>
-                    <span>Deployment</span>
-                    <strong>GitHub Pages</strong>
-                </div>
-
-                <div>
-                    <span>Project Type</span>
-                    <strong>Educational</strong>
-                </div>
-
+            <div>
+                <strong>03</strong>
+                <span>Interaction</span>
+                <p>
+                    See how organelles work together to keep cells alive.
+                </p>
             </div>
 
         </div>
@@ -1129,198 +814,74 @@
 </section>
 
 
-<!-- =========================
-     TEAM
-========================= -->
-
-<section class="section team-section">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-            PROJECT TEAM
-        </span>
-
-        <h2>
-            Group Members
-        </h2>
-
-        <p>
-            Developed as a collaborative academic mini-project.
-        </p>
-
-    </div>
-
-
-    <div class="team-grid">
-
-        <div class="team-member">
-            <div class="avatar">SB</div>
-            <h3>Savio Bino</h3>
-            <p>RA2311003010291</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">RM</div>
-            <h3>Rushil Mitra</h3>
-            <p>RA2311003010307</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">IS</div>
-            <h3>Ishan Srivastav</h3>
-            <p>RA2311003010316</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">PK</div>
-            <h3>Prayas Kar</h3>
-            <p>RA2311003010322</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">AJ</div>
-            <h3>Arjun Jayakrishnan</h3>
-            <p>RA2311003010326</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">AG</div>
-            <h3>Aryan Gupta</h3>
-            <p>RA2311003010335</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">TN</div>
-            <h3>Tirtha Nath</h3>
-            <p>RA2311003010336</p>
-        </div>
-
-        <div class="team-member">
-            <div class="avatar">AU</div>
-            <h3>Aryan Upadhyay</h3>
-            <p>RA2311003010360</p>
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <div class="footer-container">
-
-        <div>
-
-            <a href="#home" class="brand footer-brand">
-                <span class="brand-icon">🧬</span>
-                <span>Cell<span>Verse</span></span>
-            </a>
-
-            <p>
-                Understanding life, one cell at a time.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#home">Home</a>
-            <a href="#cells">Cells</a>
-            <a href="#organelles">Organelles</a>
-            <a href="#comparison">Compare</a>
-            <a href="#about">About</a>
-
-        </div>
-
+    <div class="footer-logo">
+        🧬 Cell Explorer
     </div>
 
+    <p>
+        Biology Mini Project • Cell: The Unit of Life
+    </p>
 
-    <div class="copyright">
-
-        © 2026 CellVerse · Biology Mini Project
-
-    </div>
+    <p class="copyright">
+        © 2026 Cell Explorer
+    </p>
 
 </footer>
 
 
-<!-- =========================
-     ORGANELLE MODAL
-========================= -->
+<!-- ================= ORGANELLE MODAL ================= -->
 
-<div
-    class="modal-overlay"
-    id="organellesModal"
-    aria-hidden="true"
->
+<div class="modal-overlay" id="modal">
 
-    <div
-        class="modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-    >
+    <div class="modal">
 
-        <button
-            class="modal-close"
-            id="modalClose"
-            aria-label="Close"
-        >
+        <button class="modal-close" id="modalClose">
             ×
         </button>
 
-        <div
-            class="modal-icon"
-            id="modalIcon"
-        >
-            🧬
+        <div class="modal-image">
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
         </div>
 
-        <span class="section-label">
-            CELL ORGANELLE
-        </span>
+        <div class="modal-content">
 
-        <h2 id="modalTitle">
-            Nucleus
-        </h2>
+            <span id="modalCategory">
+                ORGANELLE
+            </span>
 
-        <p id="modalDescription"></p>
+            <h2 id="modalTitle">
+                Organelle
+            </h2>
 
+            <p id="modalDescription">
+            </p>
 
-        <div class="modal-details">
+            <div class="modal-details">
 
-            <div class="detail-box">
+                <div>
+                    <strong>Function</strong>
+                    <p id="modalFunction"></p>
+                </div>
 
-                <span>📍 Location</span>
+                <div>
+                    <strong>Key Feature</strong>
+                    <p id="modalFeature"></p>
+                </div>
 
-                <p id="modalLocation"></p>
-
-            </div>
-
-
-            <div class="detail-box">
-
-                <span>🏗️ Structure</span>
-
-                <p id="modalStructure"></p>
-
-            </div>
-
-
-            <div class="detail-box">
-
-                <span>⚙️ Function</span>
-
-                <p id="modalFunction"></p>
+                <div>
+                    <strong>Found In</strong>
+                    <p id="modalFound"></p>
+                </div>
 
             </div>
 
@@ -1331,357 +892,48 @@
 </div>
 
 
-<!-- =========================
-     BACK TO TOP
-========================= -->
+<!-- ================= MEMBERS MODAL ================= -->
 
-<button
-    id="backToTop"
-    class="back-to-top"
-    aria-label="Back to top"
->
+<div class="modal-overlay" id="membersModal">
+
+    <div class="members-modal">
+
+        <button class="modal-close" id="membersClose">
+            ×
+        </button>
+
+        <span class="section-tag">
+            PROJECT TEAM
+        </span>
+
+        <h2>
+            Group Members
+        </h2>
+
+        <div class="member-list">
+
+            <div>Savio Bino <small>RA2311003010291</small></div>
+            <div>Rushil Mitra <small>RA2311003010307</small></div>
+            <div>Ishan Srivastav <small>RA2311003010316</small></div>
+            <div>Prayas Kar <small>RA2311003010322</small></div>
+            <div>Arjun Jayakrishnan <small>RA2311003010326</small></div>
+            <div>Aryan Gupta <small>RA2311003010335</small></div>
+            <div>Tirtha Nath <small>RA2311003010336</small></div>
+            <div>Aryan Upadhyay <small>RA2311003010360</small></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<button id="topBtn" class="top-btn">
     ↑
 </button>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-    /* =========================
-       MOBILE NAVIGATION
-    ========================= */
-
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    menuToggle.addEventListener("click", () => {
-
-        navMenu.classList.toggle("active");
-
-    });
-
-
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navMenu.classList.remove("active");
-
-        });
-
-    });
-
-
-    /* =========================
-       THEME TOGGLE
-    ========================= */
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-
-            themeToggle.textContent = "☀️";
-
-        } else {
-
-            themeToggle.textContent = "🌙";
-
-        }
-
-    });
-
-
-    /* =========================
-       ORGANELLE SEARCH
-    ========================= */
-
-    const searchInput =
-        document.getElementById("organelleSearch");
-
-    const cards =
-        document.querySelectorAll(".organelle-card");
-
-    const searchCount =
-        document.getElementById("searchCount");
-
-    const noResults =
-        document.getElementById("noResults");
-
-
-    searchInput.addEventListener("input", () => {
-
-        const searchValue =
-            searchInput.value.toLowerCase().trim();
-
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-
-            const name =
-                card.dataset.name.toLowerCase();
-
-            const title =
-                card.dataset.title.toLowerCase();
-
-            const text =
-                card.innerText.toLowerCase();
-
-            if (
-                name.includes(searchValue) ||
-                title.includes(searchValue) ||
-                text.includes(searchValue)
-            ) {
-
-                card.style.display = "block";
-
-                visibleCount++;
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-
-        searchCount.textContent =
-            `${visibleCount} organelle${visibleCount === 1 ? "" : "s"}`;
-
-
-        if (visibleCount === 0) {
-
-            noResults.classList.add("show");
-
-        } else {
-
-            noResults.classList.remove("show");
-
-        }
-
-    });
-
-
-    /* =========================
-       ORGANELLE MODAL
-    ========================= */
-
-    const modal =
-        document.getElementById("organellesModal");
-
-    const modalClose =
-        document.getElementById("modalClose");
-
-    const modalTitle =
-        document.getElementById("modalTitle");
-
-    const modalIcon =
-        document.getElementById("modalIcon");
-
-    const modalDescription =
-        document.getElementById("modalDescription");
-
-    const modalLocation =
-        document.getElementById("modalLocation");
-
-    const modalStructure =
-        document.getElementById("modalStructure");
-
-    const modalFunction =
-        document.getElementById("modalFunction");
-
-
-    cards.forEach(card => {
-
-        const button =
-            card.querySelector(".learn-btn");
-
-        button.addEventListener("click", () => {
-
-            modalTitle.textContent =
-                card.dataset.title;
-
-            modalIcon.textContent =
-                card.dataset.icon;
-
-            modalDescription.textContent =
-                card.dataset.function;
-
-            modalLocation.textContent =
-                card.dataset.location;
-
-            modalStructure.textContent =
-                card.dataset.structure;
-
-            modalFunction.textContent =
-                card.dataset.function;
-
-            modal.classList.add("show");
-
-            modal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            document.body.classList.add(
-                "modal-open"
-            );
-
-        });
-
-    });
-
-
-    function closeModal() {
-
-        modal.classList.remove("show");
-
-        modal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "modal-open"
-        );
-
-    }
-
-
-    modalClose.addEventListener(
-        "click",
-        closeModal
-    );
-
-
-    modal.addEventListener("click", event => {
-
-        if (event.target === modal) {
-
-            closeModal();
-
-        }
-
-    });
-
-
-    document.addEventListener("keydown", event => {
-
-        if (event.key === "Escape") {
-
-            closeModal();
-
-        }
-
-    });
-
-
-    /* =========================
-       SCROLL PROGRESS
-    ========================= */
-
-    const scrollProgress =
-        document.getElementById("scrollProgress");
-
-
-    window.addEventListener("scroll", () => {
-
-        const scrollTop =
-            document.documentElement.scrollTop;
-
-        const scrollHeight =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
-
-        const percentage =
-            (scrollTop / scrollHeight) * 100;
-
-        scrollProgress.style.width =
-            `${percentage}%`;
-
-    });
-
-
-    /* =========================
-       BACK TO TOP
-    ========================= */
-
-    const backToTop =
-        document.getElementById("backToTop");
-
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 500) {
-
-            backToTop.classList.add("show");
-
-        } else {
-
-            backToTop.classList.remove("show");
-
-        }
-
-    });
-
-
-    backToTop.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-
-    /* =========================
-       REVEAL ANIMATION
-    ========================= */
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.08
-            }
-        );
-
-
-    document
-        .querySelectorAll(
-            ".feature-card, .cell-card, .organelle-card, .process-card, .team-member, .project-card"
-        )
-        .forEach(element => {
-
-            element.classList.add("reveal");
-
-            observer.observe(element);
-
-        });
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
